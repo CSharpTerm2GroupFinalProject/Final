@@ -10,25 +10,27 @@ using System.Windows.Forms;
 
 namespace Final                                                                        //As of now, Player 2 is in manual mode, not CPU mode
 {
+    
     public partial class frmAirHockey : Form
     {
+        
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
-        int puckX = 5; //horizontal X speed value for the puck object
-        int puckY = 5; //vertical Y speed value for the puck object
+        int puckX = 10; //horizontal X speed value for the puck object
+        int puckY = 10; //vertical Y speed value for the puck object
         int score = 0; //score for the player
         int cpuPoint = 0;// score for the CPU
 
         public frmAirHockey()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(frmAirHockey_KeyDown);
-            KeyDown += new KeyEventHandler(Player2_KeyDown);
+            KeyDown += new KeyEventHandler(Player1_KeyDown);
+           // KeyDown += new KeyEventHandler(Player2_KeyDown);
             KeyPreview = true;
         }
 
-        void frmAirHockey_KeyDown(object sender, KeyEventArgs e)                    //Start of controls for Player 1
+        void Player1_KeyDown(object sender, KeyEventArgs e)                    //Start of controls for Player 1
         {
             int x = Player1.Location.X;
             int y = Player1.Location.Y;
@@ -41,7 +43,13 @@ namespace Final                                                                 
             Player1.Location = new Point(x, y);
         }                                                                   //End of controls for Player 1
 
-        private void Player2_KeyDown(object sender, KeyEventArgs e)         //Start of controls for Player 2
+        /*private void frmAirHockey_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            Player2.Top = MousePosition.Y - this.Top;
+            Player2.Left = MousePosition.X - this.Left;
+        }*/
+
+        /*private void Player2_KeyDown(object sender, KeyEventArgs e)         //Start of controls for Player 2
         {
             int x = Player2.Location.X;
             int y = Player2.Location.Y;
@@ -52,7 +60,7 @@ namespace Final                                                                 
             else if (e.KeyCode == Keys.Down) y += 10;
 
             Player2.Location = new Point(x, y);
-        }                                                                   //End of controls for Player 2
+        }                                     */                              //End of controls for Player 2
 
         private void timerTick(object sender, EventArgs e)
         {
@@ -186,5 +194,7 @@ namespace Final                                                                 
 
             
         }
+
+        
     }
 }

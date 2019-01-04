@@ -61,10 +61,12 @@
             // 
             // puck
             // 
-            this.puck.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.puck.Location = new System.Drawing.Point(640, 401);
+            this.puck.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.puck.Image = global::Final.Properties.Resources.TestGreenDot;
+            this.puck.Location = new System.Drawing.Point(612, 279);
             this.puck.Name = "puck";
             this.puck.Size = new System.Drawing.Size(27, 27);
+            this.puck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.puck.TabIndex = 1;
             this.puck.TabStop = false;
             // 
@@ -166,8 +168,10 @@
             this.Controls.Add(this.centerLine);
             this.Controls.Add(this.Player1Score);
             this.Controls.Add(this.Player2Score);
+            this.DoubleBuffered = true;
             this.Name = "frmAirHockey";
             this.Text = "Air Hockey";
+            
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player2)).EndInit();
