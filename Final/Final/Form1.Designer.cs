@@ -1,6 +1,6 @@
 ﻿namespace Final
 {
-    partial class Form1
+    partial class frmAirHockey
     {
         /// <summary>
         /// Required designer variable.
@@ -150,7 +150,7 @@
             this.bottomRightBarrier.TabIndex = 9;
             this.bottomRightBarrier.TabStop = false;
             // 
-            // Form1
+            // frmAirHockey
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,7 +166,7 @@
             this.Controls.Add(this.centerLine);
             this.Controls.Add(this.Player1Score);
             this.Controls.Add(this.Player2Score);
-            this.Name = "Form1";
+            this.Name = "frmAirHockey";
             this.Text = "Air Hockey";
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puck)).EndInit();

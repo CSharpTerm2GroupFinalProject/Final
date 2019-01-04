@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Final                                                                        //As of now, Player 2 is in manual mode, not CPU mode
 {
-    public partial class Form1 : Form
+    public partial class frmAirHockey : Form
     {
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
@@ -20,23 +20,23 @@ namespace Final                                                                 
         int score = 0; //score for the player
         int cpuPoint = 0;// score for the CPU
 
-        public Form1()
+        public frmAirHockey()
         {
             InitializeComponent();
-            KeyDown += new KeyEventHandler(Form1_KeyDown);
+            KeyDown += new KeyEventHandler(frmAirHockey_KeyDown);
             KeyDown += new KeyEventHandler(Player2_KeyDown);
             KeyPreview = true;
         }
 
-        void Form1_KeyDown(object sender, KeyEventArgs e)                    //Start of controls for Player 1
+        void frmAirHockey_KeyDown(object sender, KeyEventArgs e)                    //Start of controls for Player 1
         {
             int x = Player1.Location.X;
             int y = Player1.Location.Y;
 
-            if (e.KeyCode == Keys.Right) x += 10;
-            else if (e.KeyCode == Keys.Left) x -= 10;
-            else if (e.KeyCode == Keys.Up) y -= 10;
-            else if (e.KeyCode == Keys.Down) y += 10;
+            if (e.KeyCode == Keys.D) x += 10;
+            else if (e.KeyCode == Keys.A) x -= 10;
+            else if (e.KeyCode == Keys.W) y -= 10;
+            else if (e.KeyCode == Keys.S) y += 10;
 
             Player1.Location = new Point(x, y);
         }                                                                   //End of controls for Player 1
@@ -46,10 +46,10 @@ namespace Final                                                                 
             int x = Player2.Location.X;
             int y = Player2.Location.Y;
 
-            if (e.KeyCode == Keys.D) x += 10;
-            else if (e.KeyCode == Keys.A) x -= 10;
-            else if (e.KeyCode == Keys.W) y -= 10;
-            else if (e.KeyCode == Keys.S) y += 10;
+            if (e.KeyCode == Keys.Right) x += 10;
+            else if (e.KeyCode == Keys.Left) x -= 10;
+            else if (e.KeyCode == Keys.Up) y -= 10;
+            else if (e.KeyCode == Keys.Down) y += 10;
 
             Player2.Location = new Point(x, y);
         }                                                                   //End of controls for Player 2
@@ -153,10 +153,12 @@ namespace Final                                                                 
             if (puck.Bounds.IntersectsWith(Player1.Bounds) || puck.Bounds.IntersectsWith(Player2.Bounds))      //collision stuff
             {
                 puckX = -puckX; //bounce the puck in the other direction
+                puckY = -puckY; //bounce the puck in the other direction 
             }
             else if ((puck.Bounds.IntersectsWith(topLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(topRightBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomRightBarrier.Bounds)))
             {
                 puckX = -puckX; //bounce the puck in the other direction
+                puckY = -puckY; //bounce the puck in the other direction
             }
 
 
