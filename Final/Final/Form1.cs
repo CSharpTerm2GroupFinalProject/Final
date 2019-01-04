@@ -22,6 +22,7 @@ namespace Final                                                                 
 
         public frmAirHockey()
         {
+            
             InitializeComponent();
             KeyDown += new KeyEventHandler(frmAirHockey_KeyDown);
             KeyDown += new KeyEventHandler(Player2_KeyDown);

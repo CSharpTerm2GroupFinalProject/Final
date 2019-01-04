@@ -62,7 +62,7 @@
             // puck
             // 
             this.puck.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.puck.Location = new System.Drawing.Point(640, 401);
+            this.puck.Location = new System.Drawing.Point(510, 347);
             this.puck.Name = "puck";
             this.puck.Size = new System.Drawing.Size(27, 27);
             this.puck.TabIndex = 1;
