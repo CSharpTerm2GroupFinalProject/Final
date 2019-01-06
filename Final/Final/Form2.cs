@@ -12,6 +12,9 @@ namespace Final
 {
     public partial class mainMenu : Form
     {
+        public int counter = 1;
+
+        private frmAirHockey frmAirHockey;
         public mainMenu()
         {
             InitializeComponent();
@@ -24,12 +27,22 @@ namespace Final
 
         private void btn2PlayerGame_Click(object sender, EventArgs e)
         {
+            do
+            {
+                this.Visible = false;
+                frmAirHockey = new frmAirHockey();
+                frmAirHockey.Show();
+            }while(counter == 2);
+            frmAirHockey.Visible = false;
+            this.Visible = true;
+            
+            
 
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

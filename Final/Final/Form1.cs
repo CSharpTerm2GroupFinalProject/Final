@@ -15,10 +15,10 @@ namespace Final                                                                 
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
-        int puckX = 5; //horizontal X speed value for the puck object
-        int puckY = 5; //vertical Y speed value for the puck object
-        int score = 0; //score for the player
-        int cpuPoint = 0;// score for the CPU
+        public int puckX = 5; //horizontal X speed value for the puck object
+        public int puckY = 5; //vertical Y speed value for the puck object
+        public int score = 0; //score for the player
+        public int cpuPoint = 0;// score for the CPU
 
         public frmAirHockey()
         {
