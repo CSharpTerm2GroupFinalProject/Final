@@ -22,21 +22,18 @@ namespace Final
 
         private void btn1PlayerCpu_Click(object sender, EventArgs e)
         {
+           
+
 
         }
 
         private void btn2PlayerGame_Click(object sender, EventArgs e)
         {
-            do
-            {
                 this.Visible = false;
                 frmAirHockey = new frmAirHockey();
                 frmAirHockey.Show();
-            }while(counter == 2);
-            frmAirHockey.Visible = false;
-            this.Visible = true;
-            
-            
+                
+           
 
         }
 
