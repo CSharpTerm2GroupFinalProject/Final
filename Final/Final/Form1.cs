@@ -17,15 +17,12 @@ namespace Final                                                                 
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
-   public int puckX = 5; //horizontal X speed value for the puck object
-        public int puckY = 5; //vertical Y speed value for the puck object
-        public int score = 0; //score for the player
-        public int cpuPoint = 0;// score for the CPU
+   public int puckX = 10; //horizontal X speed value for the puck object
+        public int puckY = 10; //vertical Y speed value for the puck object
+        public int score = 9; //score for the player
+        public int cpuPoint = 9;// score for the CPU
 
-        int puckX = 10; //horizontal X speed value for the puck object
-        int puckY = 10; //vertical Y speed value for the puck object
-        int score = 0; //score for the player
-        int cpuPoint = 0;// score for the CPU
+        
 
 
         public frmAirHockey()
@@ -33,7 +30,7 @@ namespace Final                                                                 
             
             InitializeComponent();
             KeyDown += new KeyEventHandler(Player1_KeyDown);
-           // KeyDown += new KeyEventHandler(Player2_KeyDown);
+            KeyDown += new KeyEventHandler(Player2_KeyDown);
             KeyPreview = true;
         }
 
@@ -50,13 +47,9 @@ namespace Final                                                                 
             Player1.Location = new Point(x, y);
         }                                                                   //End of controls for Player 1
 
-        /*private void frmAirHockey_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
-        {
-            Player2.Top = MousePosition.Y - this.Top;
-            Player2.Left = MousePosition.X - this.Left;
-        }*/
+       
 
-        /*private void Player2_KeyDown(object sender, KeyEventArgs e)         //Start of controls for Player 2
+        private void Player2_KeyDown(object sender, KeyEventArgs e)         //Start of controls for Player 2
         {
             int x = Player2.Location.X;
             int y = Player2.Location.Y;
@@ -67,7 +60,7 @@ namespace Final                                                                 
             else if (e.KeyCode == Keys.Down) y += 10;
 
             Player2.Location = new Point(x, y);
-        }                                     */                              //End of controls for Player 2
+        }                                                                //End of controls for Player 2
 
         private void timerTick(object sender, EventArgs e)
         {
@@ -167,14 +160,14 @@ namespace Final                                                                 
             //if the puck hits either paddle
             if (puck.Bounds.IntersectsWith(Player1.Bounds) || puck.Bounds.IntersectsWith(Player2.Bounds))      //collision stuff
             {
-                puckY = -puckY; //bounce the puck in the other direction 
+                //puckY = -puckY; //bounce the puck in the other direction 
                 puckX = -puckX; //bounce the puck in the other direction
                 
             }
             else if ((puck.Bounds.IntersectsWith(topLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(topRightBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomRightBarrier.Bounds)))
             {
                 puckX = -puckX; //bounce the puck in the other direction
-                puckY = -puckY; //bounce the puck in the other direction
+                //puckY = -puckY; //bounce the puck in the other direction
             }
 
 
@@ -190,22 +183,39 @@ namespace Final                                                                 
             if (score > 9)
             {
                 gameTimer.Stop();
-                MessageBox.Show("Congratulations, Player 1, you won this game");
+                string message = "Congratulations, Player 1, you won this game. Do you wish to exit the application?";
+                string title = "Close Window";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    // Do something  
+                }
             }
             //if Player 2's score is more than 9
             //stop the timer and show a winning message box for Player 2
             if (cpuPoint > 9)
             {
                 gameTimer.Stop();
-                MessageBox.Show("Congratulations, Player 2, you won this game");
-                if(DialogResult == DialogResult.OK)
+                string message = "Congratulations, Player 2, you won this game. Do you wish to exit the application?";
+                string title = "Close Window";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
                 {
                     this.Close();
-                    
-                    
-                   
                 }
-               
+                else
+                {
+                   
+                    mainMenu OpenMenu = new mainMenu();
+                    this.Close();
+                }
+
             }
 
             

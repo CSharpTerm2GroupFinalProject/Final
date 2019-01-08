@@ -18,6 +18,7 @@ namespace Final
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new mainMenu());
             
+
         }
     }
 }
