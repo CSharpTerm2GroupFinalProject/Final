@@ -16,7 +16,8 @@ namespace Final
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAirHockey());
+            Application.Run(new mainMenu());
+            
         }
     }
 }
