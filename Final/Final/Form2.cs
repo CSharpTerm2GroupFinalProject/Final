@@ -23,7 +23,9 @@ namespace Final
         private void btn1PlayerCpu_Click(object sender, EventArgs e)
         {
            
-
+           
+            frmAirHockey = new frmAirHockey();
+            frmAirHockey.Show();
 
         }
 
