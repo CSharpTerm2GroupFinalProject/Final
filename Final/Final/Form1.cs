@@ -17,10 +17,16 @@ namespace Final                                                                 
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
+   public int puckX = 5; //horizontal X speed value for the puck object
+        public int puckY = 5; //vertical Y speed value for the puck object
+        public int score = 0; //score for the player
+        public int cpuPoint = 0;// score for the CPU
+
         int puckX = 10; //horizontal X speed value for the puck object
         int puckY = 10; //vertical Y speed value for the puck object
         int score = 0; //score for the player
         int cpuPoint = 0;// score for the CPU
+
 
         public frmAirHockey()
         {
@@ -161,8 +167,9 @@ namespace Final                                                                 
             //if the puck hits either paddle
             if (puck.Bounds.IntersectsWith(Player1.Bounds) || puck.Bounds.IntersectsWith(Player2.Bounds))      //collision stuff
             {
-                puckX = -puckX; //bounce the puck in the other direction
                 puckY = -puckY; //bounce the puck in the other direction 
+                puckX = -puckX; //bounce the puck in the other direction
+                
             }
             else if ((puck.Bounds.IntersectsWith(topLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(topRightBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomRightBarrier.Bounds)))
             {
@@ -191,11 +198,18 @@ namespace Final                                                                 
             {
                 gameTimer.Stop();
                 MessageBox.Show("Congratulations, Player 2, you won this game");
+                if(DialogResult == DialogResult.OK)
+                {
+                    this.Close();
+                    
+                    
+                   
+                }
+               
             }
 
             
         }
 
-        
     }
 }
