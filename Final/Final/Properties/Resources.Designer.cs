@@ -63,6 +63,26 @@ namespace Final.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BrosiusCarFace {
+            get {
+                object obj = ResourceManager.GetObject("BrosiusCarFace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brosiusFace {
+            get {
+                object obj = ResourceManager.GetObject("brosiusFace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TestGreenDot {
             get {
                 object obj = ResourceManager.GetObject("TestGreenDot", resourceCulture);

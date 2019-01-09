@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace Final                                                                        //As of now, Player 2 is in manual mode, not CPU mode
 {
@@ -17,13 +19,13 @@ namespace Final                                                                 
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
-   public int puckX = 10; //horizontal X speed value for the puck object
+        public int puckX = 10; //horizontal X speed value for the puck object
         public int puckY = 10; //vertical Y speed value for the puck object
         public int score = 9; //score for the player
         public int cpuPoint = 9;// score for the CPU
 
-        
-
+        string[] list = Directory.GetFiles(@"C:Users\nn137422\Deskptop\Final\Final\Final\Resources", "*.PNG", "*.png");
+        PictureBox[] pictureBoxes = new PictureBox[list.Length];
 
         public frmAirHockey()
         {
@@ -115,6 +117,7 @@ namespace Final                                                                 
                 {
                     puck.Left = 560; //reset the puck to the middle of the screen
                     puckX -= 2; //increase the speed
+                    
                 }
                 
                 cpuPoint++; //add 1 to player 2's score
