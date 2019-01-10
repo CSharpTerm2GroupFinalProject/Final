@@ -29,55 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Player1 = new System.Windows.Forms.PictureBox();
-            this.puck = new System.Windows.Forms.PictureBox();
-            this.Player2 = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.Player1Score = new System.Windows.Forms.Label();
             this.Player2Score = new System.Windows.Forms.Label();
-            this.centerLine = new System.Windows.Forms.PictureBox();
-            this.topLeftBarrier = new System.Windows.Forms.PictureBox();
-            this.bottomLeftBarrier = new System.Windows.Forms.PictureBox();
-            this.topRightBarrier = new System.Windows.Forms.PictureBox();
             this.bottomRightBarrier = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.puck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Player2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.centerLine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.topLeftBarrier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bottomLeftBarrier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.topRightBarrier)).BeginInit();
+            this.topRightBarrier = new System.Windows.Forms.PictureBox();
+            this.bottomLeftBarrier = new System.Windows.Forms.PictureBox();
+            this.topLeftBarrier = new System.Windows.Forms.PictureBox();
+            this.Player2 = new System.Windows.Forms.PictureBox();
+            this.puck = new System.Windows.Forms.PictureBox();
+            this.Player1 = new System.Windows.Forms.PictureBox();
+            this.centerLine = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightBarrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topRightBarrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomLeftBarrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topLeftBarrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.centerLine)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Player1
-            // 
-            this.Player1.BackColor = System.Drawing.Color.Red;
-            this.Player1.Location = new System.Drawing.Point(41, 279);
-            this.Player1.Name = "Player1";
-            this.Player1.Size = new System.Drawing.Size(27, 127);
-            this.Player1.TabIndex = 0;
-            this.Player1.TabStop = false;
-            // 
-            // puck
-            // 
-            this.puck.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.puck.Image = global::Final.Properties.Resources.TestGreenDot;
-            this.puck.Location = new System.Drawing.Point(510, 347);
-            this.puck.Name = "puck";
-            this.puck.Size = new System.Drawing.Size(27, 27);
-            this.puck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.puck.TabIndex = 1;
-            this.puck.TabStop = false;
-            // 
-            // Player2
-            // 
-            this.Player2.BackColor = System.Drawing.Color.ForestGreen;
-            this.Player2.Location = new System.Drawing.Point(1076, 279);
-            this.Player2.Name = "Player2";
-            this.Player2.Size = new System.Drawing.Size(27, 127);
-            this.Player2.TabIndex = 2;
-            this.Player2.TabStop = false;
             // 
             // gameTimer
             // 
@@ -107,32 +78,14 @@
             this.Player2Score.TabIndex = 4;
             this.Player2Score.Text = "00";
             // 
-            // centerLine
+            // bottomRightBarrier
             // 
-            this.centerLine.BackColor = System.Drawing.SystemColors.Desktop;
-            this.centerLine.Location = new System.Drawing.Point(563, 0);
-            this.centerLine.Name = "centerLine";
-            this.centerLine.Size = new System.Drawing.Size(16, 647);
-            this.centerLine.TabIndex = 5;
-            this.centerLine.TabStop = false;
-            // 
-            // topLeftBarrier
-            // 
-            this.topLeftBarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.topLeftBarrier.Location = new System.Drawing.Point(-1, 0);
-            this.topLeftBarrier.Name = "topLeftBarrier";
-            this.topLeftBarrier.Size = new System.Drawing.Size(40, 161);
-            this.topLeftBarrier.TabIndex = 6;
-            this.topLeftBarrier.TabStop = false;
-            // 
-            // bottomLeftBarrier
-            // 
-            this.bottomLeftBarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.bottomLeftBarrier.Location = new System.Drawing.Point(-1, 486);
-            this.bottomLeftBarrier.Name = "bottomLeftBarrier";
-            this.bottomLeftBarrier.Size = new System.Drawing.Size(40, 161);
-            this.bottomLeftBarrier.TabIndex = 7;
-            this.bottomLeftBarrier.TabStop = false;
+            this.bottomRightBarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.bottomRightBarrier.Location = new System.Drawing.Point(1098, 486);
+            this.bottomRightBarrier.Name = "bottomRightBarrier";
+            this.bottomRightBarrier.Size = new System.Drawing.Size(40, 161);
+            this.bottomRightBarrier.TabIndex = 9;
+            this.bottomRightBarrier.TabStop = false;
             // 
             // topRightBarrier
             // 
@@ -143,14 +96,61 @@
             this.topRightBarrier.TabIndex = 8;
             this.topRightBarrier.TabStop = false;
             // 
-            // bottomRightBarrier
+            // bottomLeftBarrier
             // 
-            this.bottomRightBarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.bottomRightBarrier.Location = new System.Drawing.Point(1098, 486);
-            this.bottomRightBarrier.Name = "bottomRightBarrier";
-            this.bottomRightBarrier.Size = new System.Drawing.Size(40, 161);
-            this.bottomRightBarrier.TabIndex = 9;
-            this.bottomRightBarrier.TabStop = false;
+            this.bottomLeftBarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.bottomLeftBarrier.Location = new System.Drawing.Point(-1, 486);
+            this.bottomLeftBarrier.Name = "bottomLeftBarrier";
+            this.bottomLeftBarrier.Size = new System.Drawing.Size(40, 161);
+            this.bottomLeftBarrier.TabIndex = 7;
+            this.bottomLeftBarrier.TabStop = false;
+            // 
+            // topLeftBarrier
+            // 
+            this.topLeftBarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.topLeftBarrier.Location = new System.Drawing.Point(-1, 0);
+            this.topLeftBarrier.Name = "topLeftBarrier";
+            this.topLeftBarrier.Size = new System.Drawing.Size(40, 161);
+            this.topLeftBarrier.TabIndex = 6;
+            this.topLeftBarrier.TabStop = false;
+            // 
+            // Player2
+            // 
+            this.Player2.BackColor = System.Drawing.Color.ForestGreen;
+            this.Player2.Location = new System.Drawing.Point(1076, 279);
+            this.Player2.Name = "Player2";
+            this.Player2.Size = new System.Drawing.Size(27, 127);
+            this.Player2.TabIndex = 2;
+            this.Player2.TabStop = false;
+            // 
+            // puck
+            // 
+            this.puck.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.puck.Image = global::Final.Properties.Resources.TestGreenDot;
+            this.puck.Location = new System.Drawing.Point(510, 347);
+            this.puck.Name = "puck";
+            this.puck.Size = new System.Drawing.Size(27, 27);
+            this.puck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.puck.TabIndex = 1;
+            this.puck.TabStop = false;
+            // 
+            // Player1
+            // 
+            this.Player1.BackColor = System.Drawing.Color.Red;
+            this.Player1.Location = new System.Drawing.Point(41, 279);
+            this.Player1.Name = "Player1";
+            this.Player1.Size = new System.Drawing.Size(27, 127);
+            this.Player1.TabIndex = 0;
+            this.Player1.TabStop = false;
+            // 
+            // centerLine
+            // 
+            this.centerLine.BackColor = System.Drawing.SystemColors.Desktop;
+            this.centerLine.Location = new System.Drawing.Point(563, 0);
+            this.centerLine.Name = "centerLine";
+            this.centerLine.Size = new System.Drawing.Size(16, 647);
+            this.centerLine.TabIndex = 5;
+            this.centerLine.TabStop = false;
             // 
             // frmAirHockey
             // 
@@ -170,15 +170,17 @@
             this.Controls.Add(this.Player2Score);
             this.DoubleBuffered = true;
             this.Name = "frmAirHockey";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Air Hockey";
-            ((System.ComponentModel.ISupportInitialize)(this.Player1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.puck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Player2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.centerLine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.topLeftBarrier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bottomLeftBarrier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.topRightBarrier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightBarrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topRightBarrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomLeftBarrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topLeftBarrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.centerLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

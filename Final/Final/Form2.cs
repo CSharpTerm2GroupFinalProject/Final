@@ -15,6 +15,7 @@ namespace Final
         public int counter = 1;
 
         private frmAirHockey frmAirHockey;
+        private frmAirHockeyCpu frmAirHockeyCpu;
         public mainMenu()
         {
             InitializeComponent();
@@ -22,20 +23,19 @@ namespace Final
 
         private void btn1PlayerCpu_Click(object sender, EventArgs e)
         {
-           
-           
-            frmAirHockey = new frmAirHockey();
-            frmAirHockey.Show();
-
+            // this.Visible = false;
+            frmAirHockeyCpu = new frmAirHockeyCpu();
+            frmAirHockeyCpu.Show();
         }
 
         private void btn2PlayerGame_Click(object sender, EventArgs e)
         {
-                this.Visible = false;
+                // this.Visible = false;
                 frmAirHockey = new frmAirHockey();
                 frmAirHockey.Show();
-                
            
+           
+
 
         }
 

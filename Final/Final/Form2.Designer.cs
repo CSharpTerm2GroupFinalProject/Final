@@ -205,6 +205,7 @@
             this.Controls.Add(this.btn2PlayerGame);
             this.Controls.Add(this.btn1PlayerCpu);
             this.Name = "mainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Air Hockey Main Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
