@@ -19,13 +19,18 @@ namespace Final                                                                 
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
-        public int puckX = 10; //horizontal X speed value for the puck object
-        public int puckY = 10; //vertical Y speed value for the puck object
+        public int puckX = 6; //horizontal X speed value for the puck object
+        public int puckY = 6; //vertical Y speed value for the puck object
         public int score = 9; //score for the player
         public int cpuPoint = 9;// score for the CPU
+       /* Image BrosiusCarFace = Final.Properties.Resources.BrosiusCarFace;
+        Image brosiusFace = Final.Properties.Resources.brosiusFace;
+        Image TestGreenDot = Final.Properties.Resources.TestGreenDot;
+        ImageList1.Images.Add("pic1", Image.)
 
-        string[] list = Directory.GetFiles(@"C:Users\nn137422\Deskptop\Final\Final\Final\Resources", "*.PNG", "*.png");
-        PictureBox[] pictureBoxes = new PictureBox[list.Length];
+        //string[] list = Directory.GetFiles(@"C:Final.Final.Final.Resources", "*.PNG", "*.png" );
+        ImageList[] pictureBoxes = {BrosiusCarFace, brosiusFace, TestGreenDot}//new PictureBox[];*/
+        
 
         public frmAirHockey()
         {
@@ -63,6 +68,16 @@ namespace Final                                                                 
 
             Player2.Location = new Point(x, y);
         }                                                                //End of controls for Player 2
+
+        private void ranNumberGeneratorPuck(object sender, EventArgs e)
+        {
+            int[] pace = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int x;
+
+            Random ranNumberGeneratorPuck = new Random();
+            int randomNumberPuck;
+            randomNumberPuck = ranNumberGeneratorPuck.Next(0, pace.Length);
+        }
 
         private void timerTick(object sender, EventArgs e)
         {
@@ -104,6 +119,8 @@ namespace Final                                                                 
             Random ranNumberGenerator = new Random();                                                       //test for random puck spawn after score
             int randomNumber;
             randomNumber = ranNumberGenerator.Next(1, 3);
+
+
             //if the puck has gone past Player 1's paddle through the left
             if (puck.Left < 0)
             {
@@ -143,20 +160,24 @@ namespace Final                                                                 
                 score++; //add 1 to player 1's score
             }
 
-                                                                                                
 
+
+
+
+            //controlling the puck                                                              //test for random puck spawn after score
+            
             
 
-            //controlling the puck
 
-
-
+            
 
 
             //if the puck either reaches the top of the screen or the bottom
             if (puck.Top < 0 || puck.Top + puck.Height > ClientSize.Height)
             {
-                puckY = -puckY; //reverse the speed of the puck so it stays within the screen
+                //puckY = -puckY; //reverse the speed of the puck so it stays within the screen
+                
+                puckY = -(pace[randomNumberPuck]);
             }
 
 
@@ -164,12 +185,12 @@ namespace Final                                                                 
             if (puck.Bounds.IntersectsWith(Player1.Bounds) || puck.Bounds.IntersectsWith(Player2.Bounds))      //collision stuff
             {
                 //puckY = -puckY; //bounce the puck in the other direction 
-                puckX = -puckX; //bounce the puck in the other direction
-                
+                puckX = -(pace[randomNumberPuck]); //bounce the puck in the other direction
+
             }
             else if ((puck.Bounds.IntersectsWith(topLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(topRightBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomRightBarrier.Bounds)))
             {
-                puckX = -puckX; //bounce the puck in the other direction
+                puckX = -(pace[randomNumberPuck]); //bounce the puck in the other direction
                 //puckY = -puckY; //bounce the puck in the other direction
             }
 
