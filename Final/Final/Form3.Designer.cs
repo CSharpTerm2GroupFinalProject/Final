@@ -148,7 +148,9 @@
             // 
             // gameTimerCpu
             // 
+            this.gameTimerCpu.Enabled = true;
             this.gameTimerCpu.Interval = 20;
+            this.gameTimerCpu.Tick += new System.EventHandler(this.timerTickGame);
             // 
             // frmAirHockeyCpu
             // 
@@ -166,7 +168,9 @@
             this.Controls.Add(this.topLeftBarrierGame);
             this.Controls.Add(this.Player1ScoreGame);
             this.Controls.Add(this.Player2ScoreGame);
+            this.DoubleBuffered = true;
             this.Name = "frmAirHockeyCpu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Air Hockey";
             ((System.ComponentModel.ISupportInitialize)(this.centerLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topRightBarrierGame)).EndInit();

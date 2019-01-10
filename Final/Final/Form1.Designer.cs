@@ -171,6 +171,7 @@
             this.DoubleBuffered = true;
             this.Name = "frmAirHockey";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Air Hockey";
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightBarrier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topRightBarrier)).EndInit();

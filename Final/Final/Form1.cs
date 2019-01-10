@@ -189,11 +189,13 @@ namespace Final                                                                 
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    this.Close();
+                    Application.Exit();
+                    
                 }
                 else
                 {
-                    // Do something  
+                    mainMenu OpenMenu = new mainMenu();
+                    this.Close();
                 }
             }
             //if Player 2's score is more than 9
@@ -207,13 +209,14 @@ namespace Final                                                                 
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    this.Close();
+                    Application.Exit();
                 }
                 else
                 {
                    
                     mainMenu OpenMenu = new mainMenu();
                     this.Close();
+
                 }
 
             }
