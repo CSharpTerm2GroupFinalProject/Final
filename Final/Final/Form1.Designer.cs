@@ -40,6 +40,8 @@
             this.puck = new System.Windows.Forms.PictureBox();
             this.Player1 = new System.Windows.Forms.PictureBox();
             this.centerLine = new System.Windows.Forms.PictureBox();
+            this.topBarrier = new System.Windows.Forms.PictureBox();
+            this.bottombarrier = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightBarrier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topRightBarrier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftBarrier)).BeginInit();
@@ -48,6 +50,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.puck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.centerLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topBarrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottombarrier)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -99,7 +103,7 @@
             // bottomLeftBarrier
             // 
             this.bottomLeftBarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.bottomLeftBarrier.Location = new System.Drawing.Point(-1, 486);
+            this.bottomLeftBarrier.Location = new System.Drawing.Point(0, 486);
             this.bottomLeftBarrier.Name = "bottomLeftBarrier";
             this.bottomLeftBarrier.Size = new System.Drawing.Size(40, 161);
             this.bottomLeftBarrier.TabIndex = 7;
@@ -127,7 +131,7 @@
             // 
             this.puck.BackColor = System.Drawing.SystemColors.HotTrack;
             this.puck.Image = global::Final.Properties.Resources.TestGreenDot;
-            this.puck.Location = new System.Drawing.Point(510, 347);
+            this.puck.Location = new System.Drawing.Point(518, 279);
             this.puck.Name = "puck";
             this.puck.Size = new System.Drawing.Size(27, 27);
             this.puck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,12 +156,31 @@
             this.centerLine.TabIndex = 5;
             this.centerLine.TabStop = false;
             // 
+            // topBarrier
+            // 
+            this.topBarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.topBarrier.Location = new System.Drawing.Point(31, 0);
+            this.topBarrier.Name = "topBarrier";
+            this.topBarrier.Size = new System.Drawing.Size(1072, 37);
+            this.topBarrier.TabIndex = 10;
+            this.topBarrier.TabStop = false;
+            // 
+            // bottombarrier
+            // 
+            this.bottombarrier.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.bottombarrier.Location = new System.Drawing.Point(31, 610);
+            this.bottombarrier.Name = "bottombarrier";
+            this.bottombarrier.Size = new System.Drawing.Size(1072, 37);
+            this.bottombarrier.TabIndex = 11;
+            this.bottombarrier.TabStop = false;
+            // 
             // frmAirHockey
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1137, 646);
+            this.Controls.Add(this.bottombarrier);
             this.Controls.Add(this.bottomRightBarrier);
             this.Controls.Add(this.topRightBarrier);
             this.Controls.Add(this.bottomLeftBarrier);
@@ -168,8 +191,10 @@
             this.Controls.Add(this.centerLine);
             this.Controls.Add(this.Player1Score);
             this.Controls.Add(this.Player2Score);
+            this.Controls.Add(this.topBarrier);
             this.DoubleBuffered = true;
             this.Name = "frmAirHockey";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Air Hockey";
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightBarrier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topRightBarrier)).EndInit();
@@ -179,6 +204,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.puck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.centerLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topBarrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottombarrier)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,6 +224,8 @@
         private System.Windows.Forms.PictureBox bottomLeftBarrier;
         private System.Windows.Forms.PictureBox topRightBarrier;
         private System.Windows.Forms.PictureBox bottomRightBarrier;
+        private System.Windows.Forms.PictureBox topBarrier;
+        private System.Windows.Forms.PictureBox bottombarrier;
     }
 }
 

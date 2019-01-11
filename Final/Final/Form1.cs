@@ -15,15 +15,15 @@ namespace Final                                                                 
     
     public partial class frmAirHockey : Form
     {
-        //static int[] PACE = { 1, 2, 3, };
+        static int[] PACE = { 1, 2, 2, };
 
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
         public int puckX = 6; //horizontal X speed value for the puck object
         public int puckY = 6; //vertical Y speed value for the puck object
-        //public const int PUCKSTATICX = 6;
-       // public const int PUCKSTATICY = 6;
+        public const int PUCKSTATICX = 6;
+        public const int PUCKSTATICY = 6;
         public int score = 0; //score for the player
         public int cpuPoint = 0;// score for the CPU
         
@@ -72,9 +72,9 @@ namespace Final                                                                 
         {
 
             //this is the main timer event, this event will trigger every 20 milliseconds
-           // Random ranNumberGeneratorPuck = new Random();
-           // int randomNumberPuck;
-            //randomNumberPuck = ranNumberGeneratorPuck.Next(0, PACE.Length);
+            Random ranNumberGeneratorPuck = new Random();
+            int randomNumberPuck;
+            randomNumberPuck = ranNumberGeneratorPuck.Next(0, PACE.Length);
 
            
             Player1Score.Text = "" + score; //show Player 1 score on left label
@@ -149,30 +149,85 @@ namespace Final                                                                 
                 score++; //add 1 to player 1's score
             }
 
-            //controlling the puck                                                              //test for random puck spawn after score
+            //controlling the puck                                                              
 
             
             //if the puck either reaches the top of the screen or the bottom
-            if (puck.Top < 0 || puck.Top + puck.Height > ClientSize.Height)
+            /*if (puck.Top < 0 || puck.Top + 27 > 635)
             {
-               puckY = -puckY; //reverse the speed of the puck so it stays within the screen
-               //puckY = -PUCKSTATICY*(PACE[randomNumberPuck]); 
+                if ((PACE[randomNumberPuck]) == 0)
+                {
+                    puckY = -puckY;
+                }
+                else if ((PACE[randomNumberPuck]) == 1)
+                {
+                    puckY = -(PUCKSTATICY * 2);
+                }
+                else if ((PACE[randomNumberPuck]) == 2)
+                {
+                    puckY = -(PUCKSTATICY * 2);
+                }
+                //puckY = -puckY; //reverse the speed of the puck so it stays within the screen
 
+                //puckY = -(puckY*(PACE[randomNumberPuck])); //cumulative
+            }*/
+            if (puck.Bounds.IntersectsWith(topBarrier.Bounds) || puck.Bounds.IntersectsWith(bottombarrier.Bounds))
+            {
+                puckY = -puckY; //reverse the speed of the puck so it stays within the screen
+                /*if ((PACE[randomNumberPuck]) == 0)
+                {
+                    puckY = -puckY;
+                }
+                else if ((PACE[randomNumberPuck]) == 1)
+                {
+                    puckY = -(puckY * 2);
+                }
+                else if ((PACE[randomNumberPuck]) == 2)
+                {
+                    puckY = -(PUCKSTATICY * 3);
+                }*/
             }
 
             //if the puck hits either paddle
             if (puck.Bounds.IntersectsWith(Player1.Bounds) || puck.Bounds.IntersectsWith(Player2.Bounds))      //collision stuff
             {
-                puckX = -puckX; //bounce the puck in the other direction 
-                //puckX = -PUCKSTATICX * (PACE[randomNumberPuck]); //bounce the puck in the other direction
-                //puckY = -PUCKSTATICY * (PACE[randomNumberPuck]); //bounce the puck in the other direction
+                if ((PACE[randomNumberPuck]) == 0)
+                {
+                    puckX = -puckX;
+                }
+                else if ((PACE[randomNumberPuck]) == 1)
+                {
+                    puckX = -(puckX * 2);
+                }
+                else if ((PACE[randomNumberPuck]) == 2)
+                {
+                    puckX = -(puckX * 2);
+                }
 
+                //puckX = -puckX; //bounce the puck in the other direction 
+
+                //puckX = -(puckX * (PACE[randomNumberPuck])); //bounce the puck in the other direction
+                //puckY = -PUCKSTATICY * (PACE[randomNumberPuck]); //bounce the puck in the other direction
             }
             else if ((puck.Bounds.IntersectsWith(topLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(topRightBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomRightBarrier.Bounds)))
             {
-                //puckX = -PUCKSTATICX * (PACE[randomNumberPuck]); //bounce the puck in the other direction
+                if ((PACE[randomNumberPuck]) == 0)
+                {
+                    puckX = -puckX;
+                }
+                else if ((PACE[randomNumberPuck]) == 1)
+                {
+                    puckX = -(puckX * 2);
+                }
+                else if ((PACE[randomNumberPuck]) == 2)
+                {
+                    puckX = -(puckX * 2);
+                }
+
+                //puckX = -(puckX * (PACE[randomNumberPuck])); //bounce the puck in the other direction
                 //puckY = -PUCKSTATICY * (PACE[randomNumberPuck]); //bounce the puck in the other direction
-                puckX = -puckX; //bounce the puck in the other direction
+
+                //puckX = -puckX; //bounce the puck in the other direction
             }
 
 
@@ -197,7 +252,8 @@ namespace Final                                                                 
                 }
                 else
                 {
-                    // Do something  
+                    mainMenu OpenMenu = new mainMenu();
+                    this.Close();
                 }
             }
             //if Player 2's score is more than 9
