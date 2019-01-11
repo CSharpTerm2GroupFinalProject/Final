@@ -15,15 +15,15 @@ namespace Final                                                                 
     
     public partial class frmAirHockey : Form
     {
-        static int[] PACE = { 1, 2, 3, };
+        //static int[] PACE = { 1, 2, 3, };
 
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
         public int puckX = 6; //horizontal X speed value for the puck object
         public int puckY = 6; //vertical Y speed value for the puck object
-        public const int PUCKSTATICX = 6;
-        public const int PUCKSTATICY = 6;
+        //public const int PUCKSTATICX = 6;
+       // public const int PUCKSTATICY = 6;
         public int score = 0; //score for the player
         public int cpuPoint = 0;// score for the CPU
         
@@ -66,22 +66,15 @@ namespace Final                                                                 
             Player2.Location = new Point(x, y);
         }                                                                //End of controls for Player 2
 
-        /*private void ranNumberGeneratorPuck()
-        {
-
-            Random ranNumberGeneratorPuck = new Random();
-            int randomNumberPuck;
-            randomNumberPuck = ranNumberGeneratorPuck.Next(0, PACE.Length);
-
-        }*/
+        
 
         private void timerTick(object sender, EventArgs e)
         {
 
             //this is the main timer event, this event will trigger every 20 milliseconds
-            Random ranNumberGeneratorPuck = new Random();
-            int randomNumberPuck;
-            randomNumberPuck = ranNumberGeneratorPuck.Next(0, PACE.Length);
+           // Random ranNumberGeneratorPuck = new Random();
+           // int randomNumberPuck;
+            //randomNumberPuck = ranNumberGeneratorPuck.Next(0, PACE.Length);
 
            
             Player1Score.Text = "" + score; //show Player 1 score on left label
@@ -89,8 +82,8 @@ namespace Final                                                                 
 
             puck.Top -= puckY; //assign the puck TOP to puck Y integer
             puck.Left -= puckX; //assign the puck TOP to puck Y integer
-            puck.Top -= PUCKSTATICY;
-            puck.Left -= PUCKSTATICX;
+            //puck.Top -= PUCKSTATICY;
+            //puck.Left -= PUCKSTATICX;
 
 
 
@@ -162,24 +155,24 @@ namespace Final                                                                 
             //if the puck either reaches the top of the screen or the bottom
             if (puck.Top < 0 || puck.Top + puck.Height > ClientSize.Height)
             {
-               //puckY = -puckY; //reverse the speed of the puck so it stays within the screen
-               puckY = -PUCKSTATICY*(PACE[randomNumberPuck]); 
+               puckY = -puckY; //reverse the speed of the puck so it stays within the screen
+               //puckY = -PUCKSTATICY*(PACE[randomNumberPuck]); 
 
             }
 
             //if the puck hits either paddle
             if (puck.Bounds.IntersectsWith(Player1.Bounds) || puck.Bounds.IntersectsWith(Player2.Bounds))      //collision stuff
             {
-                //puckY = -puckY; //bounce the puck in the other direction 
-                puckX = -PUCKSTATICX * (PACE[randomNumberPuck]); //bounce the puck in the other direction
+                puckX = -puckX; //bounce the puck in the other direction 
+                //puckX = -PUCKSTATICX * (PACE[randomNumberPuck]); //bounce the puck in the other direction
                 //puckY = -PUCKSTATICY * (PACE[randomNumberPuck]); //bounce the puck in the other direction
 
             }
             else if ((puck.Bounds.IntersectsWith(topLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(topRightBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomRightBarrier.Bounds)))
             {
-                puckX = -PUCKSTATICX * (PACE[randomNumberPuck]); //bounce the puck in the other direction
+                //puckX = -PUCKSTATICX * (PACE[randomNumberPuck]); //bounce the puck in the other direction
                 //puckY = -PUCKSTATICY * (PACE[randomNumberPuck]); //bounce the puck in the other direction
-                //puckY = -puckY; //bounce the puck in the other direction
+                puckX = -puckX; //bounce the puck in the other direction
             }
 
 
