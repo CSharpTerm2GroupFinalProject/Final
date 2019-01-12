@@ -32,7 +32,7 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
 
 * This project was built entirely with Visual Studio 2017 through Windows Form.
 
-
+<hr>
 <h3>Contributing</h3>
 
 
