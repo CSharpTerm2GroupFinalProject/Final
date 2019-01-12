@@ -16,7 +16,6 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
 <br>
 <br>
 <h3> Installing</h3>
-<br>
 
 * Instructions on how to install or download the program. 
 
