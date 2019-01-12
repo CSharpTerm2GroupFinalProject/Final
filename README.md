@@ -10,7 +10,8 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
   <img src="images/Flowchart.PNG" alt="Our flowchart for this project">
 <hr>
 <h3> Screenshots</h3>
-<img src="images/Cover_Pic.PNG" height="300" width="400" alt="The 2-player form">
+<img src="images/Cover_Pic.PNG" height="250" width="400" alt="The 2-player form"> 
+<img src="images/mainMenu.PNG" height="250" width="400" alt="The 2-player form">
 <hr>
 <br>
 <br>
