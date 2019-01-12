@@ -1,30 +1,17 @@
 # Final
-<img src="Flowchart.PNG" >
-# Pong Hockey <img src="Cover_Pic.jpg height="50" width="100">
+<br>
+# Pong Hockey <img src="images/Cover_Pic.jpg height="50" width="100" alt="The 2-player form">
 <hr>
 <h3>Project </h3>
-This project is a mash-up of the two classic games of Pong and Air Hockey. Our game has 
-
-Testing 
-<hr>
-
-<h3>Getting Started</h3>
-
-* The latest version of this project is <a href="https://github.com/brosius02/ExDataDig/blob/master/Process%20Files/Version%20.62.py">version .62.</a><br>
-* .62 Version can create new note pages and you can delete older notepages. 
-
+This project is a mash-up of the two classic games of Pong and Air Hockey. Our game has a 2 player mode and a 1 player with CPU opponent mode. From the main menu, you can select which mode you'd like to play. After every collision of the puck, its speed will either increase or decrease. After every score, the speed will reset to what is was originally. You control Player 1 with the WASD keys and Player 2 with the arrow keys. 
 
 <hr>
 
-<h3> Prerequisites</h3>
-
-* The things you will need to do to run this program. You will need to install python, pyshell, pycharm, wx import. 
-
-
+<h4> Flowchart <h4>
+  <img src="images/Flowchart.PNG" alt="Our flowchart for this project">
 <hr>
-
 <h3> Screenshots</h3>
-<img src="images/version .62.PNG" height="300" width="400">
+<img src="images/Cover_Pic.jpg height="300" width="400" alt="The 2-player form">
 <hr>
 <br>
 <br>
@@ -35,7 +22,7 @@ Testing
 
 * Click the download zip button and extract the file to a location that you determine. 
 
-* Copy and paste Version 0.62 into the file folder that you are running pychar through.
+* Open the .exe file through the file location Final/Final/Final/bin/Debug.
 
 
 <hr>
@@ -44,20 +31,21 @@ Testing
 <h3> Built With</h3>
 
 
-* The frame work of this was built with <a href="https://www.python.org/downloads/release/python-354/">python version 3.5.4</a>
-<hr>
+* This project was built entirely with Visual Studio 2017 through Windows Form.
 
 
 <h3>Contributing</h3>
 
 
-* If you would like to contribute to this project or have questions. You can email brosiusj@davenport.k12.ia.us 
+* If have any questions about this project, you can email nicknahnybida@gmail.com 
 
 <hr>
 
 <h3>Authors</h3>
 
-* John Brosius @JohnBrosius
+* Nicholas Nahnybida @Nick-Nahnybida
+* Sam Olsen @Olsen031
+* Fahim Fnu @ff315427
 
 <hr>
 
@@ -68,4 +56,4 @@ Testing
 
 <h3>Acknowledgments</h3>
 
-* Thanks to the many python resources available, and Stack Overflow
+* Thanks to the many C# resources available, Stack Overflow, and our teacher John Brosius @JohnBrosius
