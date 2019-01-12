@@ -1,4 +1,5 @@
-# Pong Hockey <img src="images/Cover_Pic.PNG height="50" width="100" alt="The 2-player form">
+# Pong Hockey 
+<img src="images/Cover_Pic.PNG height="50" width="100" alt="The 2-player form">
 <br>
 <hr>
 <h3>Project </h3>
