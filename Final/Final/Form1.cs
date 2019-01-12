@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 
 namespace Final                                                                        //As of now, Player 2 is in manual mode, not CPU mode
@@ -48,9 +47,7 @@ namespace Final                                                                 
 
             Player1.Location = new Point(x, y);
         }                                                                   //End of controls for Player 1
-
-       
-
+        
         private void Player2_KeyDown(object sender, KeyEventArgs e)         //Start of controls for Player 2
         {
             int x = Player2.Location.X;
@@ -65,7 +62,6 @@ namespace Final                                                                 
         }                                                                //End of controls for Player 2
 
         
-
         private void timerTick(object sender, EventArgs e)
         {
 
@@ -79,11 +75,7 @@ namespace Final                                                                 
             Player2Score.Text = "" + cpuPoint; //show Player 2 score on right label
 
             puck.Top -= puckY; //assign the puck TOP to puck Y integer
-            puck.Left -= puckX; //assign the puck TOP to puck Y integer
-            
-
-
-
+            puck.Left -= puckX; //assign the puck TOP to puck X integer
             
 
             //check the score
@@ -179,14 +171,9 @@ namespace Final                                                                 
                 }
                 
             }
-
-
+            
             //final score and ending the game
-
-
-
-
-
+            
             //if Player 1's score is more than 9
             //stop the timer and show a winning message box for Player 1
             if (score > 9)
@@ -198,7 +185,7 @@ namespace Final                                                                 
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    this.Close();
+                    Application.Exit();
                 }
                 else
                 {
@@ -217,7 +204,7 @@ namespace Final                                                                 
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    this.Close();
+                    Application.Exit();
                 }
                 else
                 {

@@ -67,20 +67,20 @@
             this.Player1Score.ForeColor = System.Drawing.Color.Red;
             this.Player1Score.Location = new System.Drawing.Point(34, 0);
             this.Player1Score.Name = "Player1Score";
-            this.Player1Score.Size = new System.Drawing.Size(55, 37);
+            this.Player1Score.Size = new System.Drawing.Size(36, 37);
             this.Player1Score.TabIndex = 3;
-            this.Player1Score.Text = "00";
+            this.Player1Score.Text = "0";
             // 
             // Player2Score
             // 
             this.Player2Score.AutoSize = true;
             this.Player2Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Player2Score.ForeColor = System.Drawing.Color.ForestGreen;
-            this.Player2Score.Location = new System.Drawing.Point(1048, 0);
+            this.Player2Score.Location = new System.Drawing.Point(1067, 0);
             this.Player2Score.Name = "Player2Score";
-            this.Player2Score.Size = new System.Drawing.Size(55, 37);
+            this.Player2Score.Size = new System.Drawing.Size(36, 37);
             this.Player2Score.TabIndex = 4;
-            this.Player2Score.Text = "00";
+            this.Player2Score.Text = "0";
             // 
             // bottomRightBarrier
             // 
@@ -180,9 +180,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1137, 646);
+            this.Controls.Add(this.topRightBarrier);
             this.Controls.Add(this.bottombarrier);
             this.Controls.Add(this.bottomRightBarrier);
-            this.Controls.Add(this.topRightBarrier);
             this.Controls.Add(this.bottomLeftBarrier);
             this.Controls.Add(this.topLeftBarrier);
             this.Controls.Add(this.Player2);
