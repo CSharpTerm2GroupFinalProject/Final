@@ -1,6 +1,5 @@
-# Final
-<br>
 # Pong Hockey <img src="images/Cover_Pic.PNG height="50" width="100" alt="The 2-player form">
+<br>
 <hr>
 <h3>Project </h3>
 This project is a mash-up of the two classic games of Pong and Air Hockey. Our game has a 2 player mode and a 1 player with CPU opponent mode. From the main menu, you can select which mode you'd like to play. After every collision of the puck, its speed will either increase or decrease. After every score, the speed will reset to what is was originally. You control Player 1 with the WASD keys and Player 2 with the arrow keys. 
