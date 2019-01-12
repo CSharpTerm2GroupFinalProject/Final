@@ -13,13 +13,7 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
 <img src="images/Cover_Pic.PNG" height="250" width="400" alt="The 2-player form"> 
 <img src="images/mainMenu.PNG" height="250" width="400" alt="The 2-player form">
 <hr>
-<br>
-<br>
-  <h3> Word of Warning</h3>
-  <h5> If the .exe file won't open after it has been previously opened </h5>
-  
-  * After opening and closing the .exe file, you may need to open the task manager and end the "Final (32-bit)" task. For some reason it stays open even after being closed by the user. We are actively looking into this issue now.
-  <hr>
+
 <h3> Installing</h3>
 
 * Instructions on how to install or download the program. 
@@ -30,7 +24,11 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
 
 
 <hr>
-
+<h3> Word of Warning</h3>
+<h5> If the .exe file won't open after it has been previously opened </h5>
+  
+  * After opening and closing the .exe file, you may need to open the task manager and end the "Final (32-bit)" task. For some reason it stays open even after being closed by the user. We are actively looking into this issue now.
+  <hr>
 
 <h3> Built With</h3>
 
