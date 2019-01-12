@@ -195,7 +195,7 @@
             this.DoubleBuffered = true;
             this.Name = "frmAirHockey";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Air Hockey";
+            this.Text = "Pong Hockey";
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightBarrier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topRightBarrier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftBarrier)).EndInit();

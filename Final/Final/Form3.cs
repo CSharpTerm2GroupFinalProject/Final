@@ -149,7 +149,7 @@ namespace Final
             }
                                                                                    //final score and ending of the game
 
-            if (scoreGame > 9)                                                     //If Player 1's score is more than 9
+            if (scoreGame > 7)                                                     //If Player 1's score is more than 7
             {
                 gameTimerCpu.Stop(); ;                                              //Stop the timer
                 string message = "Congratulations, Player 1, you won this game. Do you wish to exit the application?"; //Create a message string applauding Player 1's win and asking whether to quit or go to main menu
@@ -167,7 +167,7 @@ namespace Final
                 }
             }
             
-            if (cpuPointGame > 9)
+            if (cpuPointGame > 7)                                                  //If the CPU's score is more than 7
             {
                 gameTimerCpu.Stop();                                              //Stop the timer
                 string message = "Congratulations, Player 2, you won this game. Do you wish to exit the application?"; //Create a message string applauding the CPU's win and asking whether to quit or go to main menu

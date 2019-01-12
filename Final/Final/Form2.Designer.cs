@@ -205,7 +205,7 @@
             this.Controls.Add(this.btn2PlayerGame);
             this.Controls.Add(this.btn1PlayerCpu);
             this.Name = "mainMenu";
-            this.Text = "Air Hockey Main Menu";
+            this.Text = "Pong Hockey Main Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
