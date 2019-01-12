@@ -16,7 +16,6 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
 <br>
 <br>
   <h3> Word of Warning</h3>
-  <br>
   <h5> If the .exe file won't open after it has been previously opened </h5>
   
   * After opening and closing the .exe file, you may need to open the task manager and end the "Final (32-bit)" task. For some reason it stays open even after being closed by the user. We are actively looking into this issue now.
