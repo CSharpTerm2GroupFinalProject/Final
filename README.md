@@ -29,6 +29,10 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
   
   * After opening and closing the .exe file, you may need to open the task manager and end the "Final (32-bit)" task. For some reason it stays open even after being closed by the user. We are actively looking into this issue now.
   <hr>
+  
+<h3> Our Standing Meetings at every day
+  
+  <img src="images/StandingMeeting.jpg" alt="The 2-player form"> 
 
 <h3> Built With</h3>
 
