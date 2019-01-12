@@ -15,15 +15,13 @@ namespace Final                                                                 
     
     public partial class frmAirHockey : Form
     {
-        static int[] PACE = { 1, 2, 2, };
+        static int[] PACE = { 1, 2, 3, };
 
         //bool goUp; //boolean to be used to detect player up position
         //bool goDown; //boolean to be used to detect player down position
         //int speed = 5; //integer called speed holding value of 5                      //CPU code
         public int puckX = 6; //horizontal X speed value for the puck object
         public int puckY = 6; //vertical Y speed value for the puck object
-        public const int PUCKSTATICX = 6;
-        public const int PUCKSTATICY = 6;
         public int score = 0; //score for the player
         public int cpuPoint = 0;// score for the CPU
         
@@ -82,28 +80,11 @@ namespace Final                                                                 
 
             puck.Top -= puckY; //assign the puck TOP to puck Y integer
             puck.Left -= puckX; //assign the puck TOP to puck Y integer
-            //puck.Top -= PUCKSTATICY;
-            //puck.Left -= PUCKSTATICX;
+            
 
 
 
-            //Player2.Top += speed; //assignment of the CPU top speed integer                               //CPU code
-
-            //if the score is less than 5
-
-            /*if (score < 5)                                                                                //start of CPU code
-            {
-                //if Player 2 has reached the top or gone to the bottom of the screen
-                if (Player2.Top < 0 || Player2.Top > 527)
-                {
-                    //change the speed direction so the paddle moves back up or down
-                    speed = -speed;
-                }
-            }
-            else //if score is greater than 5, increase difficulty by enabling tracking on right paddle
-            {
-                Player2.Top = puck.Top + 30;
-            }*/                                                                                             //end of CPU code
+            
 
             //check the score
             Random ranNumberGenerator = new Random();                                                       //test for random puck spawn after score
@@ -127,6 +108,8 @@ namespace Final                                                                 
                 }
                 
                 cpuPoint++; //add 1 to player 2's score
+                puckX = 6;
+                puckY = 6;
             }
 
             //if the puck has gone past player 2's paddle on the right
@@ -147,45 +130,19 @@ namespace Final                                                                 
                 }
                 
                 score++; //add 1 to player 1's score
+                puckX = 6;
+                puckY = 6;
             }
 
             //controlling the puck                                                              
 
             
             //if the puck either reaches the top of the screen or the bottom
-            /*if (puck.Top < 0 || puck.Top + 27 > 635)
-            {
-                if ((PACE[randomNumberPuck]) == 0)
-                {
-                    puckY = -puckY;
-                }
-                else if ((PACE[randomNumberPuck]) == 1)
-                {
-                    puckY = -(PUCKSTATICY * 2);
-                }
-                else if ((PACE[randomNumberPuck]) == 2)
-                {
-                    puckY = -(PUCKSTATICY * 2);
-                }
-                //puckY = -puckY; //reverse the speed of the puck so it stays within the screen
-
-                //puckY = -(puckY*(PACE[randomNumberPuck])); //cumulative
-            }*/
+            
             if (puck.Bounds.IntersectsWith(topBarrier.Bounds) || puck.Bounds.IntersectsWith(bottombarrier.Bounds))
             {
                 puckY = -puckY; //reverse the speed of the puck so it stays within the screen
-                /*if ((PACE[randomNumberPuck]) == 0)
-                {
-                    puckY = -puckY;
-                }
-                else if ((PACE[randomNumberPuck]) == 1)
-                {
-                    puckY = -(puckY * 2);
-                }
-                else if ((PACE[randomNumberPuck]) == 2)
-                {
-                    puckY = -(PUCKSTATICY * 3);
-                }*/
+                
             }
 
             //if the puck hits either paddle
@@ -193,41 +150,34 @@ namespace Final                                                                 
             {
                 if ((PACE[randomNumberPuck]) == 0)
                 {
-                    puckX = -puckX;
+                    puckX = -(Convert.ToInt32((puckX) * .5));
                 }
                 else if ((PACE[randomNumberPuck]) == 1)
                 {
-                    puckX = -(puckX * 2);
+                    puckX = -(Convert.ToInt32((puckX) * 1.1));
                 }
                 else if ((PACE[randomNumberPuck]) == 2)
                 {
-                    puckX = -(puckX * 2);
+                    puckX = -(Convert.ToInt32((puckX) * 1));
                 }
 
-                //puckX = -puckX; //bounce the puck in the other direction 
-
-                //puckX = -(puckX * (PACE[randomNumberPuck])); //bounce the puck in the other direction
-                //puckY = -PUCKSTATICY * (PACE[randomNumberPuck]); //bounce the puck in the other direction
+                
             }
             else if ((puck.Bounds.IntersectsWith(topLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomLeftBarrier.Bounds) || puck.Bounds.IntersectsWith(topRightBarrier.Bounds) || puck.Bounds.IntersectsWith(bottomRightBarrier.Bounds)))
             {
                 if ((PACE[randomNumberPuck]) == 0)
                 {
-                    puckX = -puckX;
+                    puckX = -(Convert.ToInt32((puckX) * .5));
                 }
                 else if ((PACE[randomNumberPuck]) == 1)
                 {
-                    puckX = -(puckX * 2);
+                    puckX = -(Convert.ToInt32((puckX) * 1.1));
                 }
                 else if ((PACE[randomNumberPuck]) == 2)
                 {
-                    puckX = -(puckX * 2);
+                    puckX = -(Convert.ToInt32((puckX) * 1));
                 }
-
-                //puckX = -(puckX * (PACE[randomNumberPuck])); //bounce the puck in the other direction
-                //puckY = -PUCKSTATICY * (PACE[randomNumberPuck]); //bounce the puck in the other direction
-
-                //puckX = -puckX; //bounce the puck in the other direction
+                
             }
 
 
