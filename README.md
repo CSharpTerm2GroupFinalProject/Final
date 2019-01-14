@@ -32,7 +32,7 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
   
 <h3> Our Standing Meetings at every day
   
-  <img src="images/StandingMeeting.jpg" alt="The 2-player form"> 
+  <img src="images/StandingMeeting.jpg" alt="The 2-player form" > 
 
 <h3> Built With</h3>
 
@@ -57,7 +57,7 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
 
 <h3>License</h3>
 
-* This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* This project is licensed under the MIT License
 <hr>
 
 <h3>Acknowledgments</h3>
