@@ -56,7 +56,7 @@ namespace Final
 
 
 
-            if (scoreGame < 5)                                                     //If the score is less than 5
+            if (scoreGame < 4)                                                     //If the score is less than 5
             {                                                                      //Start of CPU code
                 if (CPU.Top < 0 || CPU.Top > 527)                                  //If the CPU has reached the top or gone to the bottom of the screen
                 {
