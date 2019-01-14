@@ -17,8 +17,8 @@ namespace Final
         int speed = 5;                                                             //Integer called speed holding value of 5
         public int puckXGame = 10;                                                 //Horizontal X speed value for the puck object
         public int puckYGame = 10;                                                 //Vertical Y speed value for the puck object
-        public int scoreGame = 7;                                                  //Score for Player 1
-        public int cpuPointGame = 7;                                               //Score for the CPU
+        public int scoreGame = 0;                                                  //Score for Player 1
+        public int cpuPointGame = 0;                                               //Score for the CPU
 
         public frmAirHockeyCpu()                                                   //Public method containing key event handlers
         {
