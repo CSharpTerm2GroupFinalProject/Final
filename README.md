@@ -18,10 +18,11 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
 
 * Instructions on how to install or download the program. 
 
-* Click the download zip button and extract the file to a location that you determine. 
+* Click this link, then click the most recent release's .exe file.--> https://github.com/CSharpTerm2GroupFinalProject/Final/releases
 
-* Open the .exe file through the file location Final/Final/Final/bin/Debug.
+* Keep the file, then click "more info," then the "run anyway" button.
 
+* Enjoy!
 
 <hr>
 <h3> Word of Warning</h3>
