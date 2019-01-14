@@ -12,36 +12,29 @@ namespace Final
 {
     public partial class mainMenu : Form
     {
-        public int counter = 1;
-
-        private frmAirHockey frmAirHockey;
-        private frmAirHockeyCpu frmAirHockeyCpu;
+              
+        private frmAirHockey frmAirHockey;                                 //Calling 2 Player game form
+        private frmAirHockeyCpu frmAirHockeyCpu;                           //Calling 1 Player game form
         public mainMenu()
         {
             InitializeComponent();
         }
 
-        private void btn1PlayerCpu_Click(object sender, EventArgs e)
+        private void btn1PlayerCpu_Click(object sender, EventArgs e)       //Private method for 1 player game button
         {
-            // this.Visible = false;
-            frmAirHockeyCpu = new frmAirHockeyCpu();
-            frmAirHockeyCpu.Show();
+            frmAirHockeyCpu = new frmAirHockeyCpu();                       //Create 1 player game form
+            frmAirHockeyCpu.Show();                                        //Show 1 player game form
         }
 
-        private void btn2PlayerGame_Click(object sender, EventArgs e)
+        private void btn2PlayerGame_Click(object sender, EventArgs e)      //Private method for 2 player game button
         {
-                // this.Visible = false;
-                frmAirHockey = new frmAirHockey();
-                frmAirHockey.Show();
-           
-           
-
-
+            frmAirHockey = new frmAirHockey();                             //Create 2 player game form
+            frmAirHockey.Show();                                           //Show 2 player game form
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void btnQuit_Click(object sender, EventArgs e)             //Private method for quit button
         {
-            Application.Exit();
+            Application.Exit();                                            //Closes the entire application
         }
     }
 }

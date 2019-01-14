@@ -35,19 +35,23 @@
             this.bottomLeftBarrierGame = new System.Windows.Forms.PictureBox();
             this.topLeftBarrierGame = new System.Windows.Forms.PictureBox();
             this.puckGame = new System.Windows.Forms.PictureBox();
-            this.Player1 = new System.Windows.Forms.PictureBox();
+            this.Player1Game = new System.Windows.Forms.PictureBox();
             this.CPU = new System.Windows.Forms.PictureBox();
             this.Player1ScoreGame = new System.Windows.Forms.Label();
             this.Player2ScoreGame = new System.Windows.Forms.Label();
             this.gameTimerCpu = new System.Windows.Forms.Timer(this.components);
+            this.bottomBarrierGame = new System.Windows.Forms.PictureBox();
+            this.topBarrierGame = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.centerLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topRightBarrierGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightBarrierGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftBarrierGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topLeftBarrierGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puckGame)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player1Game)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomBarrierGame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topBarrierGame)).BeginInit();
             this.SuspendLayout();
             // 
             // centerLine
@@ -106,14 +110,14 @@
             this.puckGame.TabIndex = 13;
             this.puckGame.TabStop = false;
             // 
-            // Player1
+            // Player1Game
             // 
-            this.Player1.BackColor = System.Drawing.Color.Red;
-            this.Player1.Location = new System.Drawing.Point(41, 279);
-            this.Player1.Name = "Player1";
-            this.Player1.Size = new System.Drawing.Size(27, 127);
-            this.Player1.TabIndex = 14;
-            this.Player1.TabStop = false;
+            this.Player1Game.BackColor = System.Drawing.Color.Red;
+            this.Player1Game.Location = new System.Drawing.Point(41, 279);
+            this.Player1Game.Name = "Player1Game";
+            this.Player1Game.Size = new System.Drawing.Size(27, 127);
+            this.Player1Game.TabIndex = 14;
+            this.Player1Game.TabStop = false;
             // 
             // CPU
             // 
@@ -131,20 +135,20 @@
             this.Player1ScoreGame.ForeColor = System.Drawing.Color.Red;
             this.Player1ScoreGame.Location = new System.Drawing.Point(34, 0);
             this.Player1ScoreGame.Name = "Player1ScoreGame";
-            this.Player1ScoreGame.Size = new System.Drawing.Size(55, 37);
+            this.Player1ScoreGame.Size = new System.Drawing.Size(36, 37);
             this.Player1ScoreGame.TabIndex = 16;
-            this.Player1ScoreGame.Text = "00";
+            this.Player1ScoreGame.Text = "0";
             // 
             // Player2ScoreGame
             // 
             this.Player2ScoreGame.AutoSize = true;
             this.Player2ScoreGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Player2ScoreGame.ForeColor = System.Drawing.Color.ForestGreen;
-            this.Player2ScoreGame.Location = new System.Drawing.Point(1051, 0);
+            this.Player2ScoreGame.Location = new System.Drawing.Point(1073, 0);
             this.Player2ScoreGame.Name = "Player2ScoreGame";
-            this.Player2ScoreGame.Size = new System.Drawing.Size(55, 37);
+            this.Player2ScoreGame.Size = new System.Drawing.Size(36, 37);
             this.Player2ScoreGame.TabIndex = 17;
-            this.Player2ScoreGame.Text = "00";
+            this.Player2ScoreGame.Text = "0";
             // 
             // gameTimerCpu
             // 
@@ -152,22 +156,42 @@
             this.gameTimerCpu.Interval = 20;
             this.gameTimerCpu.Tick += new System.EventHandler(this.timerTickGame);
             // 
+            // bottomBarrierGame
+            // 
+            this.bottomBarrierGame.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.bottomBarrierGame.Location = new System.Drawing.Point(24, 610);
+            this.bottomBarrierGame.Name = "bottomBarrierGame";
+            this.bottomBarrierGame.Size = new System.Drawing.Size(1082, 37);
+            this.bottomBarrierGame.TabIndex = 18;
+            this.bottomBarrierGame.TabStop = false;
+            // 
+            // topBarrierGame
+            // 
+            this.topBarrierGame.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.topBarrierGame.Location = new System.Drawing.Point(27, 0);
+            this.topBarrierGame.Name = "topBarrierGame";
+            this.topBarrierGame.Size = new System.Drawing.Size(1082, 37);
+            this.topBarrierGame.TabIndex = 19;
+            this.topBarrierGame.TabStop = false;
+            // 
             // frmAirHockeyCpu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1137, 646);
+            this.Controls.Add(this.topRightBarrierGame);
+            this.Controls.Add(this.topLeftBarrierGame);
             this.Controls.Add(this.CPU);
-            this.Controls.Add(this.Player1);
+            this.Controls.Add(this.Player1Game);
             this.Controls.Add(this.puckGame);
             this.Controls.Add(this.centerLine);
-            this.Controls.Add(this.topRightBarrierGame);
             this.Controls.Add(this.bottomRightBarrierGame);
             this.Controls.Add(this.bottomLeftBarrierGame);
-            this.Controls.Add(this.topLeftBarrierGame);
             this.Controls.Add(this.Player1ScoreGame);
             this.Controls.Add(this.Player2ScoreGame);
+            this.Controls.Add(this.topBarrierGame);
+            this.Controls.Add(this.bottomBarrierGame);
             this.DoubleBuffered = true;
             this.Name = "frmAirHockeyCpu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -178,8 +202,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftBarrierGame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topLeftBarrierGame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puckGame)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player1Game)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomBarrierGame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topBarrierGame)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,10 +219,12 @@
         private System.Windows.Forms.PictureBox topRightBarrierGame;
         private System.Windows.Forms.PictureBox centerLine;
         private System.Windows.Forms.PictureBox puckGame;
-        private System.Windows.Forms.PictureBox Player1;
+        private System.Windows.Forms.PictureBox Player1Game;
         private System.Windows.Forms.PictureBox CPU;
         private System.Windows.Forms.Label Player1ScoreGame;
         private System.Windows.Forms.Label Player2ScoreGame;
         private System.Windows.Forms.Timer gameTimerCpu;
+        private System.Windows.Forms.PictureBox bottomBarrierGame;
+        private System.Windows.Forms.PictureBox topBarrierGame;
     }
 }
