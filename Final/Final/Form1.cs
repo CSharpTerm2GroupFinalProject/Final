@@ -152,7 +152,7 @@ namespace Final
             }
             //final score and ending of the game
 
-            if (score > 7)                                                     //If Player 1's score is more than 7
+            if (score > 6)                                                     //If Player 1's score is more than 7
             {
                 gameTimer.Stop();                                              //Stop the timer
                 string message = "Congratulations, Player 1, you won this game. Do you wish to exit the application?"; //Create a message string applauding Player 1's win and asking whether to quit or go to main menu
@@ -170,7 +170,7 @@ namespace Final
                 }
             }
 
-            if (player2Score > 7)                                              //If Player 2's score is more than 7
+            if (player2Score > 6)                                              //If Player 2's score is more than 7
             {
                 gameTimer.Stop();                                              //Stop the timer
                 string message = "Congratulations, Player 2, you won this game. Do you wish to exit the application?"; //Create a message string applauding Player 2's win and asking whether to quit or go to main menu
