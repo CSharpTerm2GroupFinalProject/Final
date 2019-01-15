@@ -6,6 +6,12 @@ This project is a mash-up of the two classic games of Pong and Air Hockey. Our g
 
 <hr>
 
+<h4> Youtube Videos <h4>
+  <h2> To view the 1 player mode click here: https://youtu.be/zUKRvF2IWrs </h2>
+ 
+  <h2> To view the 2 player mode click here: https://youtu.be/eQlDBePWl-E </h2>
+<hr>
+  
 <h4> Flowchart <h4>
   <img src="images/Flowchart.PNG" alt="Our flowchart for this project">
 <hr>
